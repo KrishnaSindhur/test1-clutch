@@ -1,0 +1,25 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
+  name: test1-clutch-dev3
+  namespace: argocd
+spec:
+  destination:
+    name: example-destination
+    namespace: default
+  project: test1-clutch
+  source:
+    path: products/test1-clutch/manifests/dev3/
+    plugin:
+      name: argocd-vault-plugin
+    repoURL: git@github.com:KrishnaSindhur/test1-clutch
+    targetRevision: main
+  syncPolicy:
+    automated:
+      allowEmpty: false
+      prune: false
+      selfHeal: true
+    syncOptions:
+      - FailOnSharedResource=true
