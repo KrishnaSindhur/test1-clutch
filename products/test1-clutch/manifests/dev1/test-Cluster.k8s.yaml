@@ -1,0 +1,14 @@
+apiVersion: postgresql.cnpg.io/v1
+kind: Cluster
+metadata:
+  annotations:
+    "": ""
+  labels:
+    "": ""
+  name: test
+  namespace: test1-clutch-dev1
+spec:
+  enableSuperuserAccess: true
+  instances: 3
+  storage:
+    size: 1Gi
