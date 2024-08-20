@@ -1,0 +1,29 @@
+apiVersion: postgresql.cnpg.io/v1
+kind: Cluster
+metadata:
+  annotations:
+    "": ""
+  labels:
+    "": ""
+  name: test2
+  namespace: test1-clutch-dev1
+spec:
+  bootstrap:
+    recovery:
+      database: test-database
+  externalClusters:
+  - password:
+      name: danger
+  monitoring:
+    customQueriesConfigMap:
+    - key: test
+      name: test-upgrade
+    customQueriesSecret:
+    - key: query
+      name: query-test
+  walStorage:
+    size: 1Gi
+status:
+  instances: 3
+  topology:
+    successfullyExtracted: true
