@@ -1,0 +1,20 @@
+apiVersion: postgresql.cnpg.io/v1
+kind: Cluster
+metadata:
+  annotations:
+    "": ""
+  labels:
+    "": ""
+  name: test-upgrade1
+  namespace: test1-clutch-dev1
+spec:
+  monitoring:
+    customQueriesConfigMap:
+    - key: test
+      name: test-upgrade
+  startDelay: 1
+  walStorage:
+    size: 1Gi
+status:
+  demotionToken: token
+  image: https://kubernetes.io/_common-resources/images/suitcase.svg
