@@ -15,6 +15,3 @@ spec:
   startDelay: 1
   walStorage:
     size: 1Gi
-status:
-  demotionToken: token
-  image: https://kubernetes.io/_common-resources/images/suitcase.svg
