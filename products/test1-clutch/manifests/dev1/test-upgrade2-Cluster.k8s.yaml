@@ -1,0 +1,21 @@
+apiVersion: postgresql.cnpg.io/v1
+kind: Cluster
+metadata:
+  annotations:
+    "": ""
+  labels:
+    "": ""
+  name: test-upgrade2
+  namespace: test1-clutch-dev1
+spec:
+  imageName: 981042990700.dkr.ecr.us-west-2.amazonaws.com/cloudnative-pg/postgresql:12.17
+  monitoring:
+    customQueriesConfigMap:
+    - key: test
+      name: test-upgrade
+  storage:
+    size: 1Gi
+  walStorage:
+    size: 1Gi
+status:
+  instances: 3
