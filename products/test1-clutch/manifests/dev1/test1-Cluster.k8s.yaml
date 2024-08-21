@@ -5,7 +5,7 @@ metadata:
     "": ""
   labels:
     "": ""
-  name: ""
+  name: test1
   namespace: test1-clutch-dev1
 spec:
   bootstrap:
@@ -24,6 +24,15 @@ spec:
   walStorage:
     size: 1Gi
 status:
+  availableArchitectures:
+  - hash: hash
+  demotionToken: token
+  image: aws@123
+  instanceNames:
+  - test
+  - test1
   instances: 3
+  lastSuccessfulBackup: backup
   topology:
+    nodesUsed: 9
     successfullyExtracted: true
