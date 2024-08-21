@@ -19,7 +19,19 @@ spec:
     - key: test
       name: test-upgrade
     customQueriesSecret:
-    - key: quetry
+    - key: query
       name: query-test
   walStorage:
     size: 1Gi
+status:
+  availableArchitectures:
+  - hash: hash
+  - hash: hash1
+  demotionToken: token
+  image: aws@123
+  instanceNames: []
+  instances: 3
+  lastSuccessfulBackup: backups
+  topology:
+    nodesUsed: 98
+    successfullyExtracted: true
