@@ -11,8 +11,8 @@ spec:
   bootstrap:
     recovery:
       database: test-database
-  externalClusters:
-  - password: {}
+  enableSuperuserAccess: true
+  instances: 3
   monitoring:
     customQueriesConfigMap:
     - key: test
@@ -22,5 +22,7 @@ spec:
     customQueriesSecret:
     - key: quetry
       name: query-test
+  storage:
+    size: 1Gi
   walStorage:
     size: 11Gi
