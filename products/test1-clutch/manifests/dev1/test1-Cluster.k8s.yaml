@@ -12,27 +12,15 @@ spec:
     recovery:
       database: test-database
   externalClusters:
-  - password:
-      name: danger
+  - password: {}
   monitoring:
     customQueriesConfigMap:
     - key: test
       name: test-upgrade
+    - key: test2
+      name: "123"
     customQueriesSecret:
-    - key: query
+    - key: quetry
       name: query-test
   walStorage:
-    size: 1Gi
-status:
-  availableArchitectures:
-  - hash: hash
-  demotionToken: token
-  image: aws@123
-  instanceNames:
-  - test
-  - test1
-  instances: 3
-  lastSuccessfulBackup: backup
-  topology:
-    nodesUsed: 9
-    successfullyExtracted: true
+    size: 11Gi
